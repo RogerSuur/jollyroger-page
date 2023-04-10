@@ -34,10 +34,12 @@ fetch(`https://quiet-falls-21784.herokuapp.com/proxy`,options)
   .then(data => {
     jwt_token = data.token;
     alert("successfully logged in!")
+    //console.log(jwt_token)
     loginForm.style.display = "none";
     const encodedCredentials = jwt_token.split('.')[1];
     const decodedCredentials = JSON.parse(atob(encodedCredentials));
     const userId = decodedCredentials['https://hasura.io/jwt/claims']['x-hasura-user-id'];
+    console.log(userId)
     getUserData(userId)
   })
   .catch(error => {
