@@ -11,6 +11,8 @@ app.use(cors());
 
 app.use(json())
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Enable CORS
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -23,8 +25,7 @@ app.use(function(req, res, next) {
 // Define a route for the proxy
 app.get('/proxy', async (req, res) => {
   // Make the request to the remote API
-  res.sendFile(path.join(__dirname + '/index.html'));
-
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
   console.log('app.get /proxy route initiated')
   try {
   //gets values from the client
