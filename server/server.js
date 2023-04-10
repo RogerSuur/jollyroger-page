@@ -3,6 +3,7 @@ import express, { json } from 'express';
 import fetch from 'node-fetch';
 import cors from 'cors';
 
+const path = require('path');
 const app = express();
 
 const PORT = process.env.PORT || 3000; // use the environment variable or port 3000 as default
