@@ -22,7 +22,7 @@ const options = {
   headers: headers,
 };
 
-fetch(`https://rogersuur.github.io/proxy`,options)
+fetch(`https://quiet-falls-21784.herokuapp.com/proxy`,options)
   .then(response => {
     if (response.ok) {
       console.log("response ok")
