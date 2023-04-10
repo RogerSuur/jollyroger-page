@@ -3,8 +3,13 @@ let jwt_token = '';
 var results_username = document.getElementById("results_username");
 var results_total_xp = document.getElementById("results_total_xp");
 var results_user_level = document.getElementById("results_user_level");
+const tasksGraph = document.getElementById('tasks');
+const auditGraphs = document.getElementById('audit-ratio');
+const results = document.getElementById('results')
+
 const loginForm = document.getElementById("login-form");
 document.getElementById("login-form").addEventListener("submit", loginUser);
+document.getElementById("logout").addEventListener("click", logoutUser);
 
 
 function loginUser(event) {
@@ -34,6 +39,7 @@ fetch(`https://get-my-xp.herokuapp.com/proxy`,options)
     jwt_token = data.token;
     alert("successfully logged in!")
     loginForm.style.display = "none";
+    results.style.display = 'block'
     const encodedCredentials = jwt_token.split('.')[1];
     const decodedCredentials = JSON.parse(atob(encodedCredentials));
     const userId = decodedCredentials['https://hasura.io/jwt/claims']['x-hasura-user-id'];
@@ -260,11 +266,13 @@ function compareProgressAndTransaction(transactions, progresses) {
   return filteredPaths
 }
 
-function logout() {
-  localStorage.removeItem('jwt_token');
+function logoutUser() {
   alert('You have been logged out');
-  // Redirect the user to the login page or home page
-  window.location.href = 'login.html';
+  jwt_token = '';
+  console.log('jwt_token', jwt_token);
+  loginForm.style.display = "block";
+  results.style.display = "none"
+  
 }
 
 function displayAuditsGraph(completed, received) {
