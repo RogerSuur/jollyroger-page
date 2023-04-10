@@ -25,7 +25,6 @@ const options = {
 fetch(`https://get-my-xp.herokuapp.com/proxy`,options)
   .then(response => {
     if (response.ok) {
-      console.log("response ok")
       return response.json();
     } else {
       throw new Error("Error: " + response.statusText);
@@ -38,7 +37,6 @@ fetch(`https://get-my-xp.herokuapp.com/proxy`,options)
     const encodedCredentials = jwt_token.split('.')[1];
     const decodedCredentials = JSON.parse(atob(encodedCredentials));
     const userId = decodedCredentials['https://hasura.io/jwt/claims']['x-hasura-user-id'];
-    console.log(userId)
     getUserData(userId)
   })
   .catch(error => {
