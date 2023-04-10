@@ -4,7 +4,8 @@ import fetch from 'node-fetch';
 import cors from 'cors';
 
 const app = express();
-const PORT = 3000; 
+
+const PORT = process.env.PORT || 3000; // use the environment variable or port 3000 as default
 
 app.use(cors());
 
