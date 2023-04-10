@@ -34,7 +34,6 @@ fetch(`https://get-my-xp.herokuapp.com/proxy`,options)
   .then(data => {
     jwt_token = data.token;
     alert("successfully logged in!")
-    //console.log(jwt_token)
     loginForm.style.display = "none";
     const encodedCredentials = jwt_token.split('.')[1];
     const decodedCredentials = JSON.parse(atob(encodedCredentials));
