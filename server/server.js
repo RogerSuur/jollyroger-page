@@ -12,7 +12,7 @@ app.use(cors());
 
 app.use(json())
 
-app.use(express.static(path.join(__dirname, 'public')));
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 // Enable CORS
 app.use(function(req, res, next) {
