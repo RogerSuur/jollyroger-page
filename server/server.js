@@ -23,6 +23,7 @@ app.use(function(req, res, next) {
 // Define a route for the proxy
 app.get('/proxy', async (req, res) => {
   // Make the request to the remote API
+  res.sendFile(path.join(__dirname + '/index.html'));
 
   console.log('app.get /proxy route initiated')
   try {
