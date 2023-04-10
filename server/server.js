@@ -12,6 +12,8 @@ app.use(cors());
 
 app.use(json())
 
+app.use(express.static( { index: 'index.html' }));
+
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 // Enable CORS
