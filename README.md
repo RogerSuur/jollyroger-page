@@ -1,1 +1,1 @@
-# RogerSuur.github.io
+# Make logout function to work
