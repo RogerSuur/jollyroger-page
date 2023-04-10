@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-cartesian-3d.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="login-form">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" value="Jollyroger"><br><br>
+		
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" value=""><br><br>
+		
+		<input type="submit" value="Login">
+	</form>
+
+
+    <div class="container-inner">
+        <div class="results">
+            <div class="results_username"><h3>Username</h3>
+                <div id="results_username"></div>
+            </div>
+            <div class="results_total_xp"><h3>Total xp</h3>
+                <div id="results_total_xp"></div>
+            </div>
+            <div class="results_user_level"><h3>User level</h3>
+                <div id="results_user_level"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resultsXp"></div>
+    <button onclick="logout()">Logout</button>
+    <div id="audit-ratio"></div>
+    <br>
+    <br>
+    <br>
+
+
+    <div id="tasks">
+    </div>
+
+
+    <script type="module" src="app/app.js"></script>
+</body>
+</html>
