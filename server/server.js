@@ -8,13 +8,25 @@ const app = express();
 
 const PORT = process.env.PORT || 3000; // use the environment variable or port 3000 as default
 
-app.use(cors());
-
-app.use(json())
-
-app.use(express.static(  './index.html' ));
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+
+app.use(cors());
+app.use(json())
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// app.use(express.static(  './index.html' ));
+// const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Enable CORS
 // app.use(function(req, res, next) {
