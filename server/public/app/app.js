@@ -8,6 +8,8 @@ const auditGraphs = document.getElementById('audit-ratio');
 const results = document.getElementById('results')
 
 const loginForm = document.getElementById("login-form");
+const logoutForm = document.getElementById("logout");
+const inputBox = document.getElementById("box");
 document.getElementById("login-form").addEventListener("submit", loginUser);
 document.getElementById("logout").addEventListener("click", logoutUser);
 
@@ -38,8 +40,9 @@ fetch(`https://get-my-xp.herokuapp.com/proxy`,options)
   .then(data => {
     jwt_token = data.token;
     alert("successfully logged in!")
-    loginForm.style.display = "none";
+    logoutForm.style.display = "block"
     results.style.display = 'block'
+    inputBox.style.display = 'none'
     const encodedCredentials = jwt_token.split('.')[1];
     const decodedCredentials = JSON.parse(atob(encodedCredentials));
     const userId = decodedCredentials['https://hasura.io/jwt/claims']['x-hasura-user-id'];
@@ -270,8 +273,10 @@ function logoutUser() {
   alert('You have been logged out');
   jwt_token = '';
   console.log('jwt_token', jwt_token);
-  loginForm.style.display = "block";
+  
+  logoutForm.style.display = "none"
   results.style.display = "none"
+  inputBox.style.display = 'flex'
   
 }
 
