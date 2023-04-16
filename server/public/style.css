@@ -1,26 +1,139 @@
-#tasks {
-    height: 800px;
-    box-shadow: 7px 6px 5px 0px rgba(0,0,0,0.05);
+*{
+    font-family: 'Poppins', sans-serif;
+}
 
+body {
+    background-image: url("pics/pic1.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
-#header-user-audits {
-    flex-direction: row;
-    justify-content: center;
+
+.box {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
 }
-.user-audits {
+
+.container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+}
+
+span{
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+header {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0 ;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 0 0 0 45px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+img {
+    position: relative;
+    top: -33px;
+    left: 17px;
+    filter: hue-rotate(90deg);
+}
+
+.submit {
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-field{
+    padding-top: 20px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-    overflow-y:scroll;
-    height:300px;
+}
+
+.logout {
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    max-width: 200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit:hover, .logout:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+.container-inner {
+    padding: 20px 40px 0px 40px;
+}
+
+.userpic{
+    width: 1vw;
+    height: 2vh;
+}
+
+.lockpic{
+    width: 1vw;
+    height: 2vh;
+}
+
+#tasks {
+        height: calc(40px * var(--num-keys));
     box-shadow: 7px 6px 5px 0px rgba(0,0,0,0.05);
+}
+
+.user-info {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
 }
 
 #results {
     display: none;
 }
 
-#container {
-    height: 800px;
+#audit-ratio {
+    height: 200px;
+}
+
+.logout{
+    display: none;
 }

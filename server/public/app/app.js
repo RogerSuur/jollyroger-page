@@ -320,6 +320,12 @@ function displayTasksGraph(divXP) {
   // add data
   chart.data(data);
 
+  // Get the number of keys in the data object
+  var numRows = Object.keys(data.rows).length;
+
+  // Set a CSS variable to the number of keys
+  document.documentElement.style.setProperty('--num-keys', numRows);
+
   // set the chart title
   chart.title("Completed projects");
 

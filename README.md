@@ -1,1 +1,0 @@
-# Make logout function to work

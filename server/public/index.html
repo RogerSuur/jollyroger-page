@@ -14,37 +14,61 @@
 </head>
 <body>
 
-    <form id="login-form">
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username" value="Jollyroger"><br><br>
-		
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password" value=""><br><br>
-		
-		<input type="submit" value="Login">
-	</form>
+     <div class="box" id="box">
+        <div class="container">
+            <div class="top-header">
+                <header>Login</header>
+                <span>Want to see xp?</span>
+            </div>
 
 
-    <div class="container-inner">
-        <div class="results" id="results">
-            <div class="results_username"><h3>Username</h3>
-                <div id="results_username"></div>
-            </div>
-            <div class="results_total_xp"><h3>Total xp</h3>
-                <div id="results_total_xp"></div>
-            </div>
-            <div class="results_user_level"><h3>User level</h3>
-                <div id="results_user_level"></div>
-            </div>
-            <div id="audit-ratio"></div>
-            <div id="tasks"></div>
+            <form id="login-form">
+                <div class="input-field">
+                    <label for="username"></label>
+                    <input type="text" class="input" id="username" placeholder="Username" name="username" required>
+                    <img class="userpic" src="pics/user.png">
+                </div>
+                
+                <div class="input-field">
+                    <label for="password"></label>
+                    <input type="password" class="input" id="password" placeholder="Password" name="password" value="" required>
+                    <img class="lockpic" src="pics/lock.png">
+                </div>
+                
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Login">
+                </div>
+            </form>         
         </div>
     </div>
-    <button type="button" id="logout">Logout</button>
-    <br>
-    <br>
-    <br>
 
-    <script type="module" src="app/app.js"></script>
+        <div class="container-inner">
+            <div class="results" id="results">
+                <div class="user-info">
+                    <div class="results_username"><h3>Username</h3>
+                        <div id="results_username"></div>
+                    </div>
+                    <div class="results_total_xp"><h3>Total xp</h3>
+                        <div id="results_total_xp"></div>
+                    </div>
+                    <div class="results_user_level"><h3>User level</h3>
+                        <div id="results_user_level"></div>
+                    </div>
+                </div>
+                <div id="audit-ratio"></div>
+                <div id="tasks"></div>
+            </div>
+        </div>
+        
+        <div class="logout-field">
+            <button type="submit" class="logout" type="button" id="logout">Logout</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        
+        
+        <script type="module" src="app/app.js"></script>
 </body>
 </html>
