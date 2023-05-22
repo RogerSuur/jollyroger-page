@@ -13,6 +13,7 @@ app.use(cors());
 app.use(json());
 
 app.use(express.static(path.join(__dirname, "public")));
+console.log("app here");
 
 app.get("/", (req, res) => {
   console.log(__dirname);
