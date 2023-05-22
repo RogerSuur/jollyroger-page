@@ -13,16 +13,18 @@ app.use(cors());
 app.use(json());
 
 app.use(express.static(path.join(__dirname, "public")));
-console.log("app here");
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+// app.get("/", (req, res) => {
+//   console.log(__dirname);
+//   res.sendFile(path.join(__dirname, "public", "index.html"));
+// });
 
 // app.use(express.static(  './index.html' ));
 // const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) => {
+  res.send("server.js says hello");
+});
 
 // Enable CORS
 app.use(function (req, res, next) {
