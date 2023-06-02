@@ -22,9 +22,9 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use(express.static(  './index.html' ));
 // const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-app.get("/", (req, res) => {
-  res.send("server.js says hello");
-});
+// app.get("/", (req, res) => {
+//   res.send("server.js says hello");
+// });
 
 // Enable CORS
 app.use(function (req, res, next) {
