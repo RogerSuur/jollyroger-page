@@ -1,0 +1,263 @@
+:root {
+	--siteBg: black;
+	--squareSize: 30px;
+	--container-padding: 40px;
+	--default-border: 5px solid white;
+
+	--jTetriminoColor: #0000ff;
+	--lTetriminoColor: #ff7f00;
+	--sTetriminoColor: #00ff00;
+	--zTetriminoColor: #ff0000;
+	--tTetriminoColor: #800080;
+	--oTetriminoColor: #ffff00;
+	--iTetriminoColor: #00ffff;
+
+}
+
+body {
+	margin: 0;
+	font-family: 'arial';
+	font-weight: bold;
+	background-color: var(--siteBg);
+}
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 675px;
+	height: 848px;
+	
+	border: var(--default-border);
+}
+
+.left-panel {
+	left: var(--container-padding);
+	top: var(--container-padding);
+	padding: 30px 15px 30px 30px;
+	width: 350px;
+	height: 788px;
+}
+
+.right-panel {
+	position: absolute;	
+	left: 400px;
+	top: 0px;
+	padding: 30px 30px 30px 15px;
+	width: 230px;
+	height: 788px;
+}
+
+#logo {
+	width: 230px;
+}
+
+.home-menu {
+	width: calc((var(--squareSize) + 4px) * 10);
+	height: calc((var(--squareSize) + 4px) * 20);
+	margin-top: 30px;
+	border: var(--default-border);
+}
+
+.pause-menu, .end-menu {
+	width: 220px;
+	height: 250px; 
+	display: none;
+	border: var(--default-border);
+	color: white;
+	text-align: center;
+	position: relative;
+	top: 17px;
+	flex-direction: column;
+	align-items: center;
+}
+
+.end-menu {
+	height: 205px;
+}
+
+.pause-menu button, .end-menu button {
+	width: 160px;
+	margin: 5px;
+}
+
+.grid div.foundation {
+	opacity: 0;
+}
+
+.grid {
+	background-color: #141414;
+	display: flex;
+	flex-wrap: wrap;
+	border: var(--default-border);
+	
+	width: calc((var(--squareSize) + 4px) * 10);
+	height: calc((var(--squareSize) + 4px) * 20);
+	margin-top: 30px;
+	display: none;
+}
+
+.mini-grid {
+	display: flex;
+	flex-wrap: wrap;
+	
+	width: calc((var(--squareSize) + 4px) * 4);
+	height: calc((var(--squareSize) + 4px) * 2); 
+}
+
+.grid div, .mini-grid div {
+	height: var(--squareSize);
+	width: var(--squareSize);
+	margin: 1px;
+}
+
+.grid div {
+	background-color: var(--siteBg);
+	border: 1px solid var(--siteBg);
+}
+
+.mini-grid div {
+	background-color: var(--siteBg);
+	border: 1px solid var(--siteBg);
+}
+.grid div.tetrimino, .mini-grid div.tetrimino {
+	width: 20px;
+	height: 20px;
+	border: 6px outset black;
+}
+.grid div.jTetrimino, .mini-grid div.jTetrimino {
+	background-color: var(--jTetriminoColor);
+	border-color: var(--jTetriminoColor);
+}
+.grid div.lTetrimino, .mini-grid div.lTetrimino {
+	background-color: var(--lTetriminoColor);
+	border-color: var(--lTetriminoColor);
+}
+.grid div.sTetrimino, .mini-grid div.sTetrimino {
+	background-color: var(--sTetriminoColor);
+	border-color: var(--sTetriminoColor);
+}
+.grid div.zTetrimino, .mini-grid div.zTetrimino {
+	background-color: var(--zTetriminoColor);
+	border-color: var(--zTetriminoColor);
+}
+.grid div.tTetrimino, .mini-grid div.tTetrimino {
+	background-color: var(--tTetriminoColor);
+	border-color: var(--tTetriminoColor);
+}
+.grid div.oTetrimino, .mini-grid div.oTetrimino {
+	background-color: var(--oTetriminoColor);
+	border-color: var(--oTetriminoColor);
+}
+.grid div.iTetrimino, .mini-grid div.iTetrimino {
+	background-color: var(--iTetriminoColor);
+	border-color: var(--iTetriminoColor);
+}
+.grid div.shadow {
+	background-color: var(--siteBg);
+}
+
+#fpsCounter {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	margin-top: 10px;
+	width: 60px;
+	color: yellow;
+	font-size: 10px;
+	font-family: monospace;
+}
+
+#fpsCounter h1 {
+	margin: 0;
+}
+
+.displays {
+	position: absolute;
+	bottom: 110px;
+	width: 230px;
+}
+
+.display {
+	font-size: 30px;
+	width: 100%;
+	color: white;
+}
+
+.displayNumber {
+	padding-left: 5px;
+	padding-top: 6px;
+	background-color: black;
+	color: white;
+	height: 40px;
+	border: var(--default-border);
+}
+
+
+#pause-button {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	padding: 0px;
+	height: 50px;
+	border: var(--default-border);
+	background-color: var(--siteBg);
+	display: none;
+	
+}
+
+#pause-image {
+	width: 40px;
+}
+
+button {
+	background-color: white;
+	border: var(--default-border);
+	font-family: 'arial';
+	font-weight: bold;
+	font-size: 20px;
+	height: 40px;
+}
+button:hover {
+	background-color: var(--siteBg);
+	color: white;
+	border-color: black;
+}
+
+#start-button {
+	width: 100px;
+	position: relative;
+	top: 310px;
+	left: 120px;
+}
+
+#timer {
+    display: none;
+    color: white;
+	padding: 6px 0px 0px 5px;
+    font-size: 30px;
+    position: absolute;
+	right: 90px;
+	bottom: 30px;
+    width: 155px;
+	border: var(--default-border);
+	background-color: var(--siteBg);
+}
+
+.heart, .heartBroken  {
+    height: 200px;
+}
+
+#startHeart, #endHeart {
+	top: 250px; 
+	left: 90px;
+	width: 230px;
+    position: absolute;
+	color: white;
+	display: none;
+	text-align: center;
+}
+
+#startHeart p, #endHeart p {
+	font-size: 2.5rem;
+}
