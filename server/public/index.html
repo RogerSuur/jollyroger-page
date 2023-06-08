@@ -4,73 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-cartesian-3d.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+
+
     <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+    <title>Jollyroger's page</title>
 </head>
 <body>
 
-     <div class="box" id="box">
+    
+    <div id="header">
         <div class="container">
-            <div class="top-header">
-                <header>Login</header>
-                <span>Want to see xp?</span>
+            <nav>
+                <img src="pics/JollyRoger.png" class="logo" alt="" srcset="">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Software engineer</p>
+                <h1>Hi, I'm <span>Roger </span> <br>from Tallinn</h1>
             </div>
-
-
-            <a href="./tetris/static/index.html">Tetris game</a>
-
-            <form id="login-form">
-                <div class="input-field">
-                    <label for="username"></label>
-                    <input type="text" class="input" id="username" placeholder="Username" name="username" required>
-                    <img class="userpic" src="pics/user.png">
-                </div>
-                
-                <div class="input-field">
-                    <label for="password"></label>
-                    <input type="password" class="input" id="password" placeholder="Password" name="password" value="" required>
-                    <img class="lockpic" src="pics/lock.png">
-                </div>
-                
-                <div class="input-field">
-                    <input type="submit" class="submit" value="Login">
-                </div>
-            </form>         
+            <!-- <img src="pics/me_and_Hank.jpg" class="profile" alt="" srcset=""> -->
         </div>
     </div>
 
-        <div class="container-inner">
-            <div class="results" id="results">
-                <div class="user-info">
-                    <div class="results_username"><h3>Username</h3>
-                        <div id="results_username"></div>
-                    </div>
-                    <div class="results_total_xp"><h3>Total xp</h3>
-                        <div id="results_total_xp"></div>
-                    </div>
-                    <div class="results_user_level"><h3>User level</h3>
-                        <div id="results_user_level"></div>
-                    </div>
+    <!-- -----------about ----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img class="dogpic" src="pics/me_and_Hank.jpg" alt="">
                 </div>
-                <div id="audit-ratio"></div>
-                <div id="tasks"></div>
+                <div class="about-col-2"><h1 class="sub-title">About me</h1>
+                <p>Im a software developer, mainly writing in Golang, React and JS. I enjoy creating new projects, participating hackatons and creating value by solving problems. </p></div>
             </div>
         </div>
-        
-        <div class="logout-field">
-            <button type="submit" class="logout" type="button" id="logout">Logout</button>
+    </div>
+
+
+    <!-- -------------portfoli0----------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">
+                My work
+            </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="pics/tetris_game.jpg" class="work-pic" alt="">
+                    <div class="layer">
+                        <h3>Tetris Game</h3>
+                        <p>Oldschool tetris game written fully in vanilla javascript without game loop</p>                           
+                            <a href="./tetris/static/index.html"><i class="iconoir-arrow-tr" ></i></a>       
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="pics/ws_chat.jpg" class="work-pic" alt="">
+
+                    <div class="layer">
+                        <h3>Real time forum</h3>
+                        <p>Fullstack websocket social projet for chat, posts, like. Built on Golang backend, Sqlite and JS</p>                           
+                            <a href="./tetris/static/index.html"><i class="iconoir-arrow-tr" ></i></a>       
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="pics/app.jpeg" class="work-pic" alt=""><div class="layer">
+                        <h3>Bib button launcher app</h3>
+                        <p>Hackaton project app for the blind or visuallu impaired, written in Dart</p>                           
+                            <a href="https://drive.google.com/file/d/1FFMjEl_-w3ZbcJhdmFj1dL92Kb6fLOS7/view"><i class="iconoir-arrow-tr" ></i></a>       
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
         </div>
-        <br>
-        <br>
-        <br>
-        
-        
-        
+    </div>
+
         <script type="module" src="app/app.js"></script>
 </body>
 </html>
