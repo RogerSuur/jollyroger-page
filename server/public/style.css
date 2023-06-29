@@ -128,38 +128,15 @@ nav ul li a:hover::after{
     border-radius: 15px;
 }
 
-.work img{
+.work-pic {
     width: 100%;
     display: block;
     transition: transform 0.5s;
 }
 
-.work .github-link {
-    margin-top: 10px;
-    color: white;
-    font-size: 14px;
+.work-image {
+    position: relative;
 }
-
-.work .layer-content a {
-    color:  #00ab84;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.work .layer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
 
 .layer{
     width: 100%;
@@ -192,6 +169,22 @@ nav ul li a:hover::after{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    text-align: center;
+}
+
+
+.work-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.github-link {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
     text-align: center;
 }
 .work:hover img {
