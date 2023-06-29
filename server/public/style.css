@@ -133,6 +133,13 @@ nav ul li a:hover::after{
     display: block;
     transition: transform 0.5s;
 }
+
+.work .github-link {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+}
+
 .layer{
     width: 100%;
     height: 0%;
