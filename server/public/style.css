@@ -134,8 +134,10 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 
-.work-image {
-    position: relative;
+.work img{
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
 }
 
 .layer{
