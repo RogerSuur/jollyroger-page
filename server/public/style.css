@@ -15,9 +15,7 @@ body {
 
 #header {
     width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    height: 100%;
     /* background-image: url(pics/me_and_Hank.jpg); */
     background-position: center;
 }
@@ -34,6 +32,7 @@ body {
 
 .logo {
     width: 20%;
+    min-width: 150px
 }
 
 nav {
@@ -84,26 +83,24 @@ nav ul li a:hover::after{
 
 /* ------------about */
 #about{
-    padding: 80px 0;
+    margin-top: 10%;
+    margin-bottom: 10%;
     color: #8ebab4;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    padding: 10px 10%;
 }
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-/* .dogpic{
-    width: 400px;
+.dogpic{
+    object-fit: cover;
+    height: auto;
+    width: 100%;
     border-radius: 15px;
-} */
+} 
 .about-col-1 img{
-    width: 400px;
-    border-radius: 15px;
-    flex-basis: 35%;
     border-radius: 15px;
 }
 .about-col-2{
-    flex-basis: 60%;
+    margin-left: 30px;
 }
 .sub-title{
     font-size: 60px;
@@ -128,15 +125,10 @@ nav ul li a:hover::after{
     border-radius: 15px;
 }
 
-.work-pic {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s;
-}
-
 .work img{
     width: 100%;
-    display: block;
+    height: auto;
+    object-position: cover;
     transition: transform 0.5s;
 }
 
@@ -250,10 +242,16 @@ nav ul li a:hover::after{
 /* ---------CSS for small screen-------- */
 @media only screen and (max-width:600px) {
     .header-text{
-        margin-top: 100%;
+        margin-top: 30%;
         font-size: 16px;
     }
     .header-text h1{
         font-size: 30px;
+    }
+    .sub-title {
+        font-size: 20px;
+    }
+    .contact-left {
+        font-size: 10px
     }
 }
