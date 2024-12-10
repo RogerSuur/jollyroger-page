@@ -112,6 +112,13 @@ nav ul li a:hover::after{
     color: white;
 }
 
+h2 {
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
 /* ---------portfolio--- */
 #portfolio{
     margin-top: 10%;
@@ -128,12 +135,13 @@ nav ul li a:hover::after{
     overflow: hidden;
     display: block;
     border-radius: 15px;
+    aspect-ratio: 16/9;
 }
 
 .work img{
     width: 100%;
     height: auto;
-    object-position: cover;
+    object-fit: cover;
     transition: transform 0.5s;
 }
 
